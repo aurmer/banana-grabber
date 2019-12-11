@@ -1,6 +1,7 @@
 export const VISIBILITY_FILTERS = {
-  ALL: "all",
-  COMPLETED: "completed",
-  INCOMPLETE: "incomplete",
-  ENTER_KEY: 13
-};
+  ALL: 'all',
+  COMPLETED: 'completed',
+  INCOMPLETE: 'incomplete'
+}
+
+export const ENTER_KEY = 13
