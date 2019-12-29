@@ -1,15 +1,38 @@
-import { PLAYER_NAMED, TOGGLE_TODO, SET_FILTER } from './actionTypes'
+import { PLAYER_NAMED, BANANA_MISSED, BANANA_FETCHED, BANANA_CREATED, BANANA_CLICKED, START_LEVEL, REPLAY } from './actionTypes'
 
-export const playerNamed = pname => ({
+export const playerNamed = playerName => ({
   type: PLAYER_NAMED,
-  payload: {
-    pname
-  }
+  payload: { playerName }
 })
 
-export const toggleTodo = id => ({
-  type: TOGGLE_TODO,
-  payload: { id }
+
+
+export const clickedBanana = id => ({
+  type: BANANA_CLICKED,
+  payload: { banana_id: id }
 })
 
-export const setFilter = filter => ({ type: SET_FILTER, payload: { filter } })
+export const missedBanana = id => ({
+  type: BANANA_MISSED,
+  payload: { banana_id: id }
+})
+
+export const fetchedBanana = () => ({
+  type: BANANA_FETCHED,
+  payload: { }
+})
+
+export const createdBanana = () => ({
+  type: BANANA_CREATED,
+  payload: { }
+})
+
+export const replay = () => ({
+  type: REPLAY,
+  payload: { }
+})
+
+export const startLevel = () => ({
+  type: START_LEVEL,
+  payload: { }
+})

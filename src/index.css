@@ -7,7 +7,45 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.bananaImage {
+  display: inline-block;
+  background-image: url('banana100.png');
+  height: 100%;
+  width: 100%;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.bananaContainer {
+  display: inline-block;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 3000ms;
+  transition-timing-function: linear;
+}
+
+.level-number {
+  animation-name: countdown;
+  animation-duration: 1000ms;
+  animation-iteration-count: 4;
+  animation-timing-function: linear;
+}
+
+@keyframes countdown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

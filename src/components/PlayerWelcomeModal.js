@@ -2,45 +2,60 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { playerNamed } from '../redux/actions'
 import { ENTER_KEY } from '../constants'
+import {Modal,Button} from 'react-bootstrap'
 
 class PlayerWelcomeModal extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { pname: '' }
+    this.state = { playerName: '' }
   }
 
-  updateInput = pname => {
-    this.setState({ pname })
+  updateInput = playerName => {
+    this.setState({ playerName })
   }
+  updateInput_Event = e => this.updateInput(e.target.value)
 
   handleSubmit = () => {
-    this.props.playerNamed(this.state.pname)
-    this.setState({ pname: '' })
+    this.props.playerNamed(this.state.playerName)
+    this.setState({ playerName: '' })
   }
 
-  render () {
-    return (
-      <div className='newPlayerModal'>
-        <h1>Welcome To<br />Go, Go, Bananas</h1>
-        <h3>Enter your player name</h3>
+  handleSubmitOnEnter = e => {
+    if (e.which === ENTER_KEY || e.keyCode === ENTER_KEY) {
+      this.handleSubmit()
+    }
+  }
+
+  render = () =>
+    (<Modal show={true} backdrop='static'>
+      <Modal.Header>
+        <Modal.Title>Welcome To Go, Go, Bananas</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        Enter your player name
         <input
           name='playerName'
           id='playerName'
-          value={this.state.pname}
-          onChange={e => this.updateInput(e.target.value)}
-          onKeyPress={e => (((e.which || e.keyCode) === ENTER_KEY) ? this.handleSubmit() : null)}
+          value={this.state.playerName}
+          onChange={this.updateInput_Event}
+          onKeyPress={this.handleSubmitOnEnter}
+          autoComplete='off'
+          style={{marginLeft:'20px'}}
         />
-        <button
-          onClick={this.handleSubmit}
-        >Submit
-        </button>
-      </div>)
-  }
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="primary" onClick={this.handleSubmit}>
+          Submit
+        </Button>
+      </Modal.Footer>
+    </Modal>)
 }
 
-const mapStateToProps = state => ({ pname: state.gameState.pname })
+function mapStateToProps (state) {
+  return { playerName: state.gameState.playerName }
+}
 
-// export default Todo;
+// export default Todo
 export default connect(
   mapStateToProps,
   { playerNamed }
