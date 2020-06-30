@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/banana-grabber/static/css/main.64d8bcc1.chunk.css",
+    "main.js": "/banana-grabber/static/js/main.1d6c5777.chunk.js",
+    "main.js.map": "/banana-grabber/static/js/main.1d6c5777.chunk.js.map",
+    "runtime-main.js": "/banana-grabber/static/js/runtime-main.05ba1750.js",
+    "runtime-main.js.map": "/banana-grabber/static/js/runtime-main.05ba1750.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/banana-grabber/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.9932cd5b.chunk.js": "/banana-grabber/static/js/2.9932cd5b.chunk.js",
+    "static/js/2.9932cd5b.chunk.js.map": "/banana-grabber/static/js/2.9932cd5b.chunk.js.map",
+    "index.html": "/banana-grabber/index.html",
+    "precache-manifest.c8231118111071eb019fe5083a140393.js": "/banana-grabber/precache-manifest.c8231118111071eb019fe5083a140393.js",
+    "service-worker.js": "/banana-grabber/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/banana-grabber/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.64d8bcc1.chunk.css.map": "/banana-grabber/static/css/main.64d8bcc1.chunk.css.map",
+    "static/js/2.9932cd5b.chunk.js.LICENSE.txt": "/banana-grabber/static/js/2.9932cd5b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/banana-grabber/static/media/banana100.cf458382.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05ba1750.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.9932cd5b.chunk.js",
+    "static/css/main.64d8bcc1.chunk.css",
+    "static/js/main.1d6c5777.chunk.js"
+  ]
+}
